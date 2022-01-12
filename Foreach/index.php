@@ -76,6 +76,24 @@ echo "<br><br>";
 
 echo "8.Les mois depuis le début de l'année : <br>";
 
+$arrMonth = [
+    "janvier",
+    "février",
+    "mars",
+    "avril",
+    "mai",
+    "juin",
+    "juillet",
+    "aout",
+    "septembre",
+    "octobre",
+    "novembre",
+    "décembre",
+];
+
+foreach ($arrMonth as $item){
+    echo $item . "<br>";
+}
 
 
 //Afficher les mois de la fin de l'année jusqu'au début de l'année
@@ -83,4 +101,8 @@ echo "8.Les mois depuis le début de l'année : <br>";
 
 echo "9.Les mois depuis la fin de l'année : <br>";
 
+$len = count($arrMonth);
+for($i = $len - 1 ; $i > 0 ; $i--){
+    echo $arrMonth[$i] . "<br>";
+}
 
