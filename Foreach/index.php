@@ -77,11 +77,13 @@ $videotheque[] = [
     'date' => 1999,
     'realisateur' => 'Les Wachowski',
     'acteurs' => [
-        '',
-        '',
-        '',
+        'Keanu Reeves',
+        'Carrie-Anne Moss',
+        'Laurence Fishburne',
     ],
-    'synopsis' => '',
+    'synopsis' => "Programmeur anonyme dans un service administratif le jour, Thomas Anderson devient Neo la nuit venue.
+     Sous ce pseudonyme, il est l'un des pirates les plus recherchés du cyber-espace. À cheval entre deux mondes, Neo 
+     est assailli par d'étranges songes",
 ];
 
 $videotheque[] = [
