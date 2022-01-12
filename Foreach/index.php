@@ -1,108 +1,33 @@
 <?php
 
-/*****************************************/
-/********** Les boucles : Foreach ********/
-/*****************************************/
-//Parcourir un tableau simple
+//Afficher les noms et prénoms des élèves de ce collège
 
-$couleurs = ['rouge', 'bleu', 'vert', 'orange', 'marron', 'noir', 'blanc'];
-echo "5.Les couleurs : <br>";
-foreach ($couleurs as $value) {
-    echo $value."<br>";
-}
-echo "<br><br>";
-
-
-
-//----------------------------------------
-//parcourir un tableau associatif
-
-$vehicule = array(
-  //clé => valeur
-  "nom" => "Aventador LP 700-4",
-  "marque" => "Lamborghini",
-  "puissance" => 700,
-  "prix" => 200000,
-);
-echo "6.Spécificité de ma voiture : <br>";
-//syntaxe : foreach($tableau as $cle => $valeur )
-foreach ($vehicule as $propriete => $valeur) {
-    echo $propriete." : ".$valeur."<br>";
-}
-echo "<br><br>";
-
-
-//Parcourir un tableau associatif multidimensionnel
-
-$vehiculeConcession = array(
-  'Bas de gamme' => array(
-    'nom' => 'C1',
-       'marque' => 'Citroen',
-       'puissance' => 70,
-       'prix' => 10000,
+$college = array(
+  'Sixieme' => array(
+    array("Nom" => "Payet", "Prenom" => "Mickael"),
+    array("Nom" => "Hoareau", "Prenom" => "Christine"),
+    array("Nom" => "Maillot", "Prenom" => "Laure"),
   ),
-  'Milieu de gamme' => array(
-    'nom' => 'Golf',
-       'marque' => 'VW',
-       'puissance' => 140,
-       'prix' => 270000,
+  'Cinquieme' => array(
+    array("Nom" => "Bourdon", "Prenom" => "Didier"),
+    array("Nom" => "Legitimus", "Prenom" => "Pascal"),
+    array("Nom" => "Campan", "Prenom" => "Bernard"),
+    array("Nom" => "Fois", "Prenom" => "Marina"),
+    array("Nom" => "Foresti", "Prenom" => "Florence"),
   ),
-  'Haut de gamme' => array(
-    'nom' => 'Aventador LP 700-4',
-       'marque' => 'Lamborghini',
-       'puissance' => 700,
-       'prix' => 200000,
+  'Quatrieme' => array(
+    array("Nom" => "Willis", "Prenom" => "Bruce"),
+    array("Nom" => "Lawrence", "Prenom" => "Laurence"),
+    array("Nom" => "Johannson", "Prenom" => "Scarlett"),
+    array("Nom" => "Jackson", "Prenom" => "Samuel"),
   ),
 );
 
-echo "7.Les voitures dans la concession :";
-foreach ($vehiculeConcession as $gamme => $voiture) {
-    echo "<br>".$gamme;
-    echo "<br>";
-    foreach ($voiture as $propriete => $valeur) {
-        echo $propriete." : ".$valeur."<br>";
-    }
+echo "10.Les élèves du collège : <br>";
+
+//Ajoutez votre code ici
+foreach ($college as $school => $student){
+    foreach ($student as $item){
+        echo $item['Nom'].' '.$item['Prenom'].'<br>';
+    };
 }
-echo "<br><br>";
-
-
-/*###############################################*/
-/*################# ACTIVITÉS ###################*/
-/*###############################################*/
-
-//----------------------------------------
-//Créer un tableau pour les mois de l'année et afficher tous les mois de Janvier à Décembre;
-//Modifier et/ou remplacer les éléments ci-dessous
-
-echo "8.Les mois depuis le début de l'année : <br>";
-
-$arrMonth = [
-    "janvier",
-    "février",
-    "mars",
-    "avril",
-    "mai",
-    "juin",
-    "juillet",
-    "aout",
-    "septembre",
-    "octobre",
-    "novembre",
-    "décembre",
-];
-
-foreach ($arrMonth as $item){
-    echo $item . "<br>";
-}
-
-
-//Afficher les mois de la fin de l'année jusqu'au début de l'année
-//Modifier et/ou remplacer les éléments ci-dessous
-
-echo "9.Les mois depuis la fin de l'année : <br>";
-
-$len = count($arrMonth);
-for($i = $len - 1 ; $i > 0 ; $i--){
-    echo $arrMonth[$i] . "<br>";
-}
-
